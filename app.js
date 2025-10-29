@@ -50,35 +50,35 @@ app.get('/about', (req, res) => {
 });
 
 // Load Airbnb dataset
-const fullFilePath = path.join(__dirname, 'data', 'airbnb_with_photos.json');
+// const fullFilePath = path.join(__dirname, 'data', 'airbnb_with_photos.json');
+// // const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
+
+// let airbnbData = [];
+
+// try {
+//   if (fs.existsSync(fullFilePath)) {
+//     airbnbData = JSON.parse(fs.readFileSync(fullFilePath, 'utf8'));
+//     console.log(`Loaded full dataset: ${airbnbData.length} records`);
+//   } else {
+//     airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
+//     console.log(`Loaded small dataset: ${airbnbData.length} records`);
+//   }
+// } catch (err) {
+//   console.error('Error loading dataset:', err);
+//   airbnbData = [];
+// }
+
 const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
 
 let airbnbData = [];
 
 try {
-  if (fs.existsSync(fullFilePath)) {
-    airbnbData = JSON.parse(fs.readFileSync(fullFilePath, 'utf8'));
-    console.log(`Loaded full dataset: ${airbnbData.length} records`);
-  } else {
-    airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
-    console.log(`Loaded small dataset: ${airbnbData.length} records`);
-  }
+  airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
+  console.log(`Loaded small dataset: ${airbnbData.length} records`);
 } catch (err) {
   console.error('Error loading dataset:', err);
   airbnbData = [];
 }
-
-// const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
-
-// let airbnbData = [];
-
-// try {
-//   airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
-//   console.log(`Loaded small dataset: ${airbnbData.length} records`);
-// } catch (err) {
-//   console.error('Error loading dataset:', err);
-//   airbnbData = [];
-// }
 
 
 // --- SEARCH BY ID ---
@@ -145,7 +145,7 @@ app.post(
 
 // step 8 
 app.get('/viewData', (req, res) => {
-    const limitedData = airbnbData.slice(0, 100);
+  const limitedData = airbnbData.slice(0, 100);
   res.render('viewData', { 
     title: 'View All Airbnb Data',
     records: airbnbData
