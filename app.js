@@ -28,6 +28,7 @@ app.engine('hbs', exphbs({ extname: '.hbs', partialDir: path.join(__dirname, 'vi
     }
   } }));
 app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 // --- ROUTES ---
 
