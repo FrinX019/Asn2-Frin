@@ -50,35 +50,35 @@ app.get('/about', (req, res) => {
 });
 
 // Load Airbnb dataset
-// const fullFilePath = path.join(__dirname, 'data', 'airbnb_with_photos.json');
-// const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
-
-// let airbnbData = [];
-
-// try {
-//   if (fs.existsSync(fullFilePath)) {
-//     airbnbData = JSON.parse(fs.readFileSync(fullFilePath, 'utf8'));
-//     console.log(`Loaded full dataset: ${airbnbData.length} records`);
-//   } else {
-//     airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
-//     console.log(`Loaded small dataset: ${airbnbData.length} records`);
-//   }
-// } catch (err) {
-//   console.error('Error loading dataset:', err);
-//   airbnbData = [];
-// }
-
+const fullFilePath = path.join(__dirname, 'data', 'airbnb_with_photos.json');
 const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
 
 let airbnbData = [];
 
 try {
-  airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
-  console.log(`Loaded small dataset: ${airbnbData.length} records`);
+  if (fs.existsSync(fullFilePath)) {
+    airbnbData = JSON.parse(fs.readFileSync(fullFilePath, 'utf8'));
+    console.log(`Loaded full dataset: ${airbnbData.length} records`);
+  } else {
+    airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
+    console.log(`Loaded small dataset: ${airbnbData.length} records`);
+  }
 } catch (err) {
   console.error('Error loading dataset:', err);
   airbnbData = [];
 }
+
+// const smallFilePath = path.join(__dirname, 'data', 'airbnb_small.json');
+
+// let airbnbData = [];
+
+// try {
+//   airbnbData = JSON.parse(fs.readFileSync(smallFilePath, 'utf8'));
+//   console.log(`Loaded small dataset: ${airbnbData.length} records`);
+// } catch (err) {
+//   console.error('Error loading dataset:', err);
+//   airbnbData = [];
+// }
 
 
 // --- SEARCH BY ID ---
