@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frin Patel — Resume</title>
+  <style>
+    :root {
+      --ink:#0f172a;
+      --muted:#475569;
+      --accent:#2563eb;
+      --chip:#e2e8f0;
+      --bg:#ffffff;
+      --rule:#e5e7eb;
+    }
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;
+      line-height: 1.5;
+    }
+    .page {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      border: 1px solid var(--rule);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .role {
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+    .contact {
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      align-items: center;
+    }
+    .badge {
+      background: var(--chip);
+      border: 1px solid #dbe2eb;
+      padding: .4rem .6rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .badge:hover {outline: 2px solid var(--accent);}
+
+    hr {border: none; border-top: 1px solid var(--rule); margin: 1.5rem 0;}
+
+    h2 {
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .5rem;
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: .5rem 1rem;
+      padding: 1rem 0;
+    }
+    .item + .item {border-top: 1px dashed var(--rule);}
+    .meta {color: var(--muted); font-size: .9rem; white-space: nowrap;}
+    .sub {color: var(--muted); margin-top: .2rem;}
+
+    ul {margin: .5rem 0 0 1.2rem; padding: 0;}
+    li {margin: .3rem 0;}
+
+    .chips {display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem;}
+    .chip {
+      background: var(--chip);
+      border: 1px solid #dbe2eb;
+      padding: .3rem .6rem;
+      border-radius: 999px;
+      font-size: .85rem;
+    }
+
+    .cols {display: grid; grid-template-columns: 1.1fr .9fr; gap: 1.5rem;}
+    .links a {color: var(--accent); text-decoration: none; font-size: .9rem;}
+    .links a:hover {text-decoration: underline;}
+
+    .print-note {margin-top: 1rem; font-size: .9rem; color: #334155; background: #fafafa; border: 1px dashed var(--rule); border-radius: .75rem; padding: .75rem;}
+    .btn {border: 1px solid var(--rule); border-radius: .5rem; background: white; padding: .4rem .8rem; cursor: pointer;}
+    .btn:hover {border-color: var(--accent);}
+
+    @media print {
+      body {background: white;}
+      .page {box-shadow: none; border: none; margin: 0; padding: 0;}
+      .print-note, .btn {display: none;}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>Frin Patel</h1>
+        <div class="role">Software Developer • Full‑Stack & Data</div>
+      </div>
+      <nav class="contact">
+        <a class="badge" href="mailto:frinpatel1841974@gmail.com">✉️ frinpatel1841974@gmail.com</a>
+        <a class="badge" href="tel:+16479980558">📞 +1 (647) 998‑0558</a>
+        <a class="badge" href="https://github.com/frinpatel1953" target="_blank">GitHub</a>
+        <a class="badge" href="https://linkedin.com/in/frin-patel-382b531bb/" target="_blank">LinkedIn</a>
+        <span class="badge">📍 Toronto, ON</span>
+      </nav>
+    </header>
+
+    <hr>
+
+    <section>
+      <h2>Work Experience</h2>
+      <div class="item">
+        <div>
+          <h3>Full‑Stack Developer Intern — Brainybeam Info‑Tech PVT LTD</h3>
+          <div class="sub">Enhanced billing system speed and UX with QR‑code integrations and optimized transactions.</div>
+          <ul>
+            <li>Added QR flow to invoices, cutting retrieval time by <strong>50%</strong>.</li>
+            <li>Improved transaction performance and reliability by <strong>40%</strong>.</li>
+            <li>Helped standardize deployment steps for smoother releases.</li>
+          </ul>
+        </div>
+        <div class="meta">Jan 2024 – May 2024</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <h3>Data Analytics & ML Intern — INFOLABZ IT SERVICES</h3>
+          <div class="sub">Built analytics dashboards, automated tests, and used agile methods to deliver faster.</div>
+          <ul>
+            <li>Created data‑driven UI with Python (pandas) boosting usability by <strong>15%</strong>.</li>
+            <li>Set up automated tests with TensorFlow Serving — fewer bugs after release.</li>
+            <li>Adopted agile workflow and monitoring for steady 15% productivity gain.</li>
+          </ul>
+        </div>
+        <div class="meta">Jul 2023 – Aug 2023</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="item">
+        <div>
+          <h3>Vehicle Maintenance & Service Management System</h3>
+          <div class="sub">JavaFX • Spring Boot • Oracle 19c • PL/SQL</div>
+          <ul>
+            <li>Built scheduling, inventory, and billing features.</li>
+            <li>Optimized PL/SQL code to speed up reports by <strong>30%</strong>.</li>
+            <li>Ensured reliable data flow with proper triggers and testing.</li>
+          </ul>
+        </div>
+        <div class="meta">Apr 2025</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <h3>Cattel Feed — Pet Nutrition Platform</h3>
+          <div class="sub">React.js • Node.js • MongoDB</div>
+          <ul>
+            <li>Launched site to help pet owners find better food options and book experts.</li>
+            <li>Improved engagement by adding blogs and mobile‑friendly design.</li>
+          </ul>
+        </div>
+        <div class="meta">Jun 2024</div>
+      </div>
+    </section>
+
+    <section class="cols">
+      <div>
+        <h2>Education</h2>
+        <div class="item">
+          <div>
+            <h3>Humber College — PG in Information Technology Solutions</h3>
+            <div class="sub">CGPA: 9.48 / 10.0 (in progress)</div>
+          </div>
+          <div class="meta">Sept 2024 – Present</div>
+        </div>
+        <div class="item">
+          <div>
+            <h3>Kalol Institute of Technology — BEng, Computer Engineering</h3>
+            <div class="sub">CGPA: 8.15 / 10.0</div>
+          </div>
+          <div class="meta">Graduated May 2024</div>
+        </div>
+        <div class="links">
+          <strong>Key Courses:</strong>
+          <div>Programming, OOP (Java), DBMS, OS, IoT, ML, Cloud, AI</div>
+        </div>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">HTML/CSS</span><span class="chip">SQL</span><span class="chip">PL/SQL</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">TypeScript</span>
+        </div>
+        <div class="section" style="margin-top:1rem">
+          <strong>Certifications</strong>
+          <ul>
+            <li>Software Engineering Virtual Experience — JPMorgan Chase</li>
+            <li>HarvardX Data Science</li>
+            <li>Data Analysis with Python — freeCodeCamp</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="print-note" aria-hidden="true">
+      <div><strong>Print‑friendly:</strong> Use Print → Save as PDF for a clean copy.</div>
+      <button class="btn" onclick="window.print()">Print</button>
+    </section>
+  </main>
+</body>
+</html>
